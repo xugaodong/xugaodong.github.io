@@ -46,9 +46,20 @@
             王守仁（1472年10月31日—1529年1月9日），汉族，幼名云，字伯安，别号阳明。浙江绍兴府余姚县（今属宁波余姚）人，因曾筑室于会稽山阳明洞，自号阳明子，学者称之为阳明先生，亦称王阳明。
         </p>
 
-        <iframe src="//www.runoob.com">
-            <p>您的浏览器支持不支持  iframe 标签。</p>
-        </iframe>
+        <p>点击下面的按钮，只要 i 小于 5 就一直循环代码块。</p>
+        <button onclick="myFunction()">点击这里</button>
+        <p id="demo"></p>
+        <script>
+            function myFunction() {
+                var x = "",
+                    i = 0;
+                while (i < 5) {
+                    x = x + "该数字为 " + i + "<br>";
+                    i++;
+                }
+                document.getElementById("demo").innerHTML = x;
+            }
+        </script>
 
 
         <p class="main">
