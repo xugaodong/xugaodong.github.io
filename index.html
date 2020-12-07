@@ -45,13 +45,18 @@
 
     <h1>My first SVG</h1>
 
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
-   <defs>
-    <path id="path1" d="M75,20 a1,1 0 0,0 100,0" />
-  </defs>
-  <text x="10" y="100" style="fill:red;">
-    <textpath xlink:href="#path1">I love SVG I love SVG</textpath>
-  </text>
+    <svg viewbox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
+      stroke="lightgrey" stroke-width="2" fill="none" id="motionPath"/>
+    <circle cx="10" cy="110" r="3" fill="lightgrey"/>
+    <circle cx="110" cy="10" r="3" fill="lightgrey"/>
+
+    <circle r="5" fill="red">
+    <animatemotion dur="3s" repeatcount="indefinite"
+        keypoints="0;0.5;1" keytimes="0;0.15;1" calcmode="linear">
+      <mpath xlink:href="#motionPath"/>
+    </animatemotion>
+  </circle>
 </svg>
 
 
